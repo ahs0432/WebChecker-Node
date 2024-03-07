@@ -38,7 +38,7 @@ type ResponseCheckDTO struct {
 	Scenarios *[]RespScenarioDTO     `json:"Scenario"`
 	SSL       *SSLDTO                `json:"SSL"`
 	Status    int                    `json:"Status"`
-	ExecTime  int                    `json:"Exectime"`
+	ExecTime  int                    `json:"ExecTime"`
 	Headers   map[string]interface{} `json:"Headers"`
 	FailURL   []StatusDTO            `json:"FailURL"`
 }
