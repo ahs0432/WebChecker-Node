@@ -10,11 +10,11 @@ type ConfigDTO struct {
 }
 
 type RequestCheckDTO struct {
-	Index     int64             `json:"index"`
-	URL       string            `json:"url"`
-	Scenarios *[]ReqScenarioDTO `json:"scenario"`
-	SSLCheck  bool              `json:"sslcheck"`
-	Timeout   int64             `json:"timeout"`
+	Index     int64             `json:"Index"`
+	URL       string            `json:"URL"`
+	Scenarios *[]ReqScenarioDTO `json:"Scenario"`
+	SSLCheck  bool              `json:"SSLCheck"`
+	Timeout   int64             `json:"Timeout"`
 }
 
 /*
@@ -25,46 +25,46 @@ Types
 4. Wait: WaitTime
 */
 type ReqScenarioDTO struct {
-	Index    int64   `json:"index"`
-	Type     int     `json:"type"`
-	Target   *string `json:"target"`
-	Text     *string `json:"text"`
-	WaitTime *int    `json:"waittime"`
+	Index    int64   `json:"Index"`
+	Type     int     `json:"Type"`
+	Target   *string `json:"Target"`
+	Text     *string `json:"Text"`
+	WaitTime *int    `json:"WaitTime"`
 }
 
 type ResponseCheckDTO struct {
-	Index     int64                  `json:"index"`
-	URL       string                 `json:"url"`
-	Scenarios *[]RespScenarioDTO     `json:"scenario"`
-	SSL       *SSLDTO                `json:"ssl"`
-	Status    int                    `json:"status"`
-	ExecTime  int                    `json:"exectime"`
-	Headers   map[string]interface{} `json:"headers"`
-	FailURL   []StatusDTO            `json:"failURL"`
+	Index     int64                  `json:"Index"`
+	URL       string                 `json:"URL"`
+	Scenarios *[]RespScenarioDTO     `json:"Scenario"`
+	SSL       *SSLDTO                `json:"SSL"`
+	Status    int                    `json:"Status"`
+	ExecTime  int                    `json:"Exectime"`
+	Headers   map[string]interface{} `json:"Headers"`
+	FailURL   []StatusDTO            `json:"FailURL"`
 }
 
 type RespScenarioDTO struct {
-	Index      int64  `json:"index"`
-	Syntax     bool   `json:"syntax"`
-	Result     *bool  `json:"result"`
-	ExecTime   int    `json:"exectime"`
-	Screenshot string `json:"screenshot"`
+	Index      int64  `json:"Index"`
+	Syntax     bool   `json:"Syntax"`
+	Result     *bool  `json:"Result"`
+	ExecTime   int    `json:"ExecTime"`
+	Screenshot string `json:"Screenshot"`
 }
 
 type ResponseDTO struct {
-	Status       int              `json:"status"`
-	Message      string           `json:"message"`
-	ResponseData ResponseCheckDTO `json:"responseData"`
+	Status       int              `json:"Status"`
+	Message      string           `json:"Message"`
+	ResponseData ResponseCheckDTO `json:"ResponseData"`
 }
 
 type SSLDTO struct {
-	Issuer     string    `json:"issuer"`
-	DNSNames   []string  `json:"dnsnames"`
-	IssueDate  time.Time `json:"issuedate"`
-	ExpireDate time.Time `json:"expiredate"`
+	Issuer     string    `json:"Issuer"`
+	DNSNames   []string  `json:"DNSNames"`
+	IssueDate  time.Time `json:"IssueDate"`
+	ExpireDate time.Time `json:"ExpireDate"`
 }
 
 type StatusDTO struct {
-	URL    string `json:"url"`
-	Status int    `json:"status"`
+	URL    string `json:"URL"`
+	Status int    `json:"Status"`
 }
